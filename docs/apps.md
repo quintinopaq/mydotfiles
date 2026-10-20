@@ -21,6 +21,7 @@ Atualizações  em breve!!
 | :--- | :--- | :--- |
 | **Editor de Código** | [VSCodium](https://vscodium.com/) | Base do VS Code 100% livre de telemetria da Microsoft, mais leve e com suporte total às extensões. |
 | **Containers** | [Podman Desktop](https://podman-desktop.io/) | Alternativa moderna ao Docker Desktop com engine própria, daemonless e compatível com ferramentas Docker. |
+| **Framework Web** | [Laravel](https://laravel.com/) + [Sail](https://laravel.com/docs/sail) | Framework PHP moderno. Com o Sail, todo o ecossistema (PHP, MySQL, Redis) roda isolado no Docker. [Ver guia completo de instalação e uso](/laravel). |
 
 ---
 

@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'Meus Dotfiles',
   description: 'Configurações e Dotfiles para Arch Linux e Hyprland por paqgamer',
   base: '/mydotfiles/',
+  ignoreDeadLinks: 'localhostLinks',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/screenshots/desktop.png' }],
     ['meta', { name: 'theme-color', content: '#1793d1' }]
@@ -15,7 +16,8 @@ export default defineConfig({
       { text: 'Início', link: '/' },
       { text: 'Setup & Dotfiles', link: '/setup' },
       { text: 'Tutorial Arch', link: '/tutorial-arch' },
-      { text: 'Megathread de Apps', link: '/apps' }
+      { text: 'Megathread de Apps', link: '/apps' },
+      { text: 'Guia Laravel', link: '/laravel' }
     ],
     sidebar: [
       {
@@ -29,6 +31,12 @@ export default defineConfig({
         text: '🐧 Guia Arch Linux',
         items: [
           { text: 'Instalação do Arch Linux', link: '/tutorial-arch' }
+        ]
+      },
+      {
+        text: '🚀 Desenvolvimento Web',
+        items: [
+          { text: 'Laravel & Sail', link: '/laravel' }
         ]
       }
     ],
