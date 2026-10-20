@@ -1,7 +1,7 @@
 # 📦 A Megathread de Aplicativos
 
 Uma curadoria pessoal de softwares, utilitários e ferramentas recomendadas para o dia a dia no **Arch Linux**, separadas por categoria de produtividade e uso.
-
+Atualizações  em breve!!
 ---
 
 ## 🖥️ Core System & Terminal
