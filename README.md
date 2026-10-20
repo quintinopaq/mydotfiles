@@ -36,7 +36,7 @@ Essas são as engrenagens principais que fazem o sistema rodar:
 | [Tutorial De instalação](tutorial_arch.md)
 
 - **Window Manager:** [Hyprland (Wayland)](https://hypr.land/)
-- **Barra de Status:** [Waybar](https://github.com/alexays/waybar)
+- **Barra de Status:** [Waybar](https://github.com/alexays/waybar) *(transicionando para o [Caelestia Shell](https://github.com/caelestia-dots/shell))*
 - **Lockscreen:** [Hyprlock](https://wiki.hypr.land/Hypr-Ecosystem/hyprlock/)
 - **Captura de Tela:** Grim + Slurp + Magick
 - **Edição Rápida:** Satty
@@ -91,7 +91,7 @@ Esta é a coletânea de ferramentas que utilizo no meu dia a dia no Arch Linux. 
 
 | Categoria           | Ferramenta                                                                   | Por que uso?                                                                                                                                                                                                                                                       |
 | :--------------------| :-----------------------------------------------------------------------------| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Navegador Web       | [Floorp](https://floorp.app/)                                                | _Gosto do firefox, porém uso floorp por ter "workspaces", que dividem o fluxo de trabalho, estudo, pesquisa etc, tem extensões pra isso eu acho, mas gostei do floorp_                                                                                             |
+| Navegador Web       | [Zen Browser](https://zen-browser.app/)                      | _Base Firefox moderna e bonita, com abas verticais, suporte excelente a workspaces e divisão de tela (split view)_                                                                                   |
 | Central Social      | [Ferdium](https://ferdium.org/) [ElecWhat](https://github.com/piec/elecwhat) | _Aqui consegue juntar whatsapp, discord, trello etc em um app só, é como se tivesse rodando o site, mas de forma organizada e mais intuitiva que simplesmente abrir no navegador, e elecwhat é melhor para apenas whatsapp por suportar ligações no modo web beta_ |
 | Gestor de Downloads | [AB-Download Manager](https://abdownloadmanager.com/)                        | _Melhor que baixar no navegador, leve, e se integra no navegador com uma extensao, então é só clicar baixar no navegador que vai direto pro popup do AB-DM_                                                                                                        |
 

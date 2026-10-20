@@ -8,10 +8,32 @@ Um guia direto e descomplicado para criar e desenvolver aplicações com **Larav
 
 O [Laravel Sail](https://laravel.com/docs/sail) é uma interface de linha de comando leve desenvolvida pela própria equipe do Laravel para interagir com o ambiente Docker pré-configurado do framework.
 
+### O problema do ambiente local tradicional
+
+Para rodar Laravel "na lata", você precisa instalar e manter na sua máquina:
+
+- **PHP** e dezenas de extensões (`mbstring`, `pdo_mysql`, `bcmath`, `xml`, `curl`...)
+- **Composer** e **Node.js**
+- **Bancos de dados e serviços auxiliares** (MySQL/PostgreSQL, Redis, servidor de e-mail de teste)
+
+No **Arch Linux** isso piora por ser *rolling release*: o PHP do sistema sempre avança para a versão mais recente. Se um projeto exigir PHP 8.2 e outro PHP 8.4, manter várias versões e extensões lado a lado vira dor de cabeça, e uma atualização do sistema pode quebrar um projeto que funcionava ontem.
+
+### Como o Sail resolve isso
+
+1. **Zero poluição no seu computador:** nada de PHP, Composer ou banco de dados instalados no sistema. Quando não estiver programando, basta rodar `sail stop` e nenhum serviço consome RAM.
+2. **Isolamento por projeto:** cada projeto tem seu próprio `docker-compose.yml`, então um pode usar PHP 8.2 + MySQL e outro PHP 8.4 + PostgreSQL, sem conflito de versões ou portas.
+3. **Fim do "na minha máquina funciona":** toda a equipe (e o servidor de homologação) roda exatamente as mesmas versões das dependências.
+4. **Serviços prontos com um parâmetro:** Redis, Meilisearch, Mailpit (para testar e-mails sem enviar de verdade) e Selenium já vêm integrados ao `.env`, sem configuração manual.
+5. **Comandos simples:** em vez de `docker compose exec laravel.test php artisan migrate`, você digita só `sail artisan migrate`.
+
 ::: tip 💡 Vantagens do Sail
 - **Zero poluição no seu computador:** Você não precisa instalar PHP, Composer, MySQL, PostgreSQL, Redis ou Node.js diretamente no seu sistema operacional.
 - **Ambiente idêntico:** Toda a equipe e servidores de homologação rodam nas mesmas versões exatas de dependências.
 - **Pronto para produção:** Inclui serviços modernos como Mailpit (para testar envio de emails localmente sem disparar de verdade), Redis, Meilisearch e Selenium.
+:::
+
+::: warning ⚖️ Quando o Sail pode não valer a pena
+Containers consomem um pouco mais de disco e memória do que rodar nativamente, e o primeiro `sail up` baixa imagens grandes. Em máquinas muito limitadas, ou se você só mantém um único projeto com versões fixas, o ambiente nativo pode ser suficiente.
 :::
 
 ---

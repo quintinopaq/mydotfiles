@@ -15,7 +15,8 @@ Se você nunca instalou o Arch Linux antes, **leia atentamente cada instrução*
 ### Criando a Mídia de Instalação
 
 1. **Backup:** Tenha em mãos um pendrive de no mínimo **8 GB**. Faça backup prévio de todos os arquivos contidos nele, pois a unidade será formatada.
-2. **Ventoy:** Baixe e utilize o [Ventoy](https://www.ventoy.net) para criar um pendrive de boot múltiplo simplesmente copiando imagens ISO para dentro dele.
+2. **Ventoy:** Baixe e utilize o [Ventoy](https://www.ventoy.net) para criar um pendrive de boot múltiplo simplesmente copiando imagens ISO para dentro dele. 
+*(Nota: Atualmente estou em transição do Ventoy para uma inicialização manual com GRUB).*
 3. **Imagem do Arch Linux:** Baixe a ISO oficial mais recente em [archlinux.org/download](https://archlinux.org/download/) e copie para a partição do Ventoy.
 
 ::: tip 💡 Dica Opcional (GParted Live)

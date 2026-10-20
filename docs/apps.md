@@ -29,7 +29,7 @@ Atualizações  em breve!!
 
 | Categoria | Ferramenta | Por que uso? |
 | :--- | :--- | :--- |
-| **Navegador Web** | [Floorp](https://floorp.app/) | Base Firefox com foco em privacidade e recurso nativo de workspaces para organizar abas por projeto. |
+| **Navegador Web** | [Zen Browser](https://zen-browser.app/) | Base Firefox moderna e elegante com foco em privacidade, abas verticais, split view e workspaces integrados. |
 | **Central Social** | [Ferdium](https://ferdium.org/) / [ElecWhat](https://github.com/piec/elecwhat) | Agrupa WhatsApp, Discord, Trello etc. em uma janela única. ElecWhat se destaca pelo suporte a chamadas. |
 | **Gestor de Downloads** | [AB-Download Manager](https://abdownloadmanager.com/) | Acelerador de download rápido, leve e com extensão de integração para navegadores. |
 
