@@ -1,0 +1,25 @@
+{
+  "name": "mydotfiles",
+  "version": "1.0.0",
+  "description": "Configurações e Dotfiles para Arch Linux e Hyprland",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paqgamer/mydotfiles.git"
+  },
+  "keywords": [
+    "dotfiles",
+    "archlinux",
+    "hyprland",
+    "waybar"
+  ],
+  "author": "paqgamer",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
