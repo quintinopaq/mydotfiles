@@ -44,7 +44,7 @@ Para evitar conflitos entre computadores com especificações e necessidades dis
 O repositório conta com scripts automatizados de symlinks que fazem backup seguro das configurações existentes antes de vincular:
 
 ```bash
-git clone https://github.com/paqgamer/mydotfiles.git ~/mydotfiles
+git clone https://github.com/quintinopaq/mydotfiles.git ~/mydotfiles
 cd ~/mydotfiles
 
 # Se estiver no Desktop:

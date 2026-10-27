@@ -8,7 +8,7 @@ Um repositório pessoal para manter meu ambiente de desenvolvimento e uso diári
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-00a7b5?style=for-the-badge&logo=linux&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Bash](https://img.shields.io/badge/Scripts-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-[![Site Online](https://img.shields.io/badge/Site-GitHub_Pages-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://paqgamer.github.io/mydotfiles/)
+[![Site Online](https://img.shields.io/badge/Site-GitHub_Pages-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://quintinopaq.github.io/mydotfiles/)
 
 <br>
 <table>

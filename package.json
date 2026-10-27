@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paqgamer/mydotfiles.git"
+    "url": "git+https://github.com/quintinopaq/mydotfiles.git"
   },
   "keywords": [
     "dotfiles",
@@ -17,7 +17,7 @@
     "hyprland",
     "waybar"
   ],
-  "author": "paqgamer",
+  "author": "quintinopaq",
   "license": "MIT",
   "devDependencies": {
     "vitepress": "^1.6.4"

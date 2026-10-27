@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'pt-BR',
   title: 'Meus Dotfiles',
-  description: 'Configurações e Dotfiles para Arch Linux e Hyprland por paqgamer',
+  description: 'Configurações e Dotfiles para Arch Linux e Hyprland por quintinopaq',
   base: '/mydotfiles/',
   ignoreDeadLinks: 'localhostLinks',
   head: [
@@ -67,11 +67,11 @@ export default defineConfig({
       }
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/paqgamer/mydotfiles' }
+      { icon: 'github', link: 'https://github.com/quintinopaq/mydotfiles' }
     ],
     footer: {
       message: 'Ambiente Arch Linux & Hyprland configurado com foco em agilidade e minimalismo.',
-      copyright: 'Copyright © 2026 paqgamer'
+      copyright: 'Copyright © 2026 quintinopaq'
     },
     docFooter: {
       prev: 'Página anterior',
@@ -82,7 +82,7 @@ export default defineConfig({
       label: 'Nesta página'
     },
     editLink: {
-      pattern: 'https://github.com/paqgamer/mydotfiles/edit/main/docs/:path',
+      pattern: 'https://github.com/quintinopaq/mydotfiles/edit/main/docs/:path',
       text: 'Sugerir alteração no GitHub'
     },
     lastUpdated: {
