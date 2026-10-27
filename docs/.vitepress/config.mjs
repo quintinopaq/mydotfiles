@@ -17,6 +17,7 @@ export default defineConfig({
       { text: 'Setup & Dotfiles', link: '/setup' },
       { text: 'Tutorial Arch', link: '/tutorial-arch' },
       { text: 'Megathread de Apps', link: '/apps' },
+      { text: 'Comandos Linux', link: '/comandos' },
       { text: 'Guia Laravel', link: '/laravel' }
     ],
     sidebar: [
@@ -30,7 +31,8 @@ export default defineConfig({
       {
         text: '🐧 Guia Arch Linux',
         items: [
-          { text: 'Instalação do Arch Linux', link: '/tutorial-arch' }
+          { text: 'Instalação do Arch Linux', link: '/tutorial-arch' },
+          { text: 'Comandos Mais Úteis', link: '/comandos' }
         ]
       },
       {

@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: 📦 Apps Favoritos
       link: /apps
+    - theme: alt
+      text: ⚡ Comandos Úteis
+      link: /comandos
 
 features:
   - icon: 🖥️
@@ -26,6 +29,9 @@ features:
   - icon: 📖
     title: Guia Arch Passo a Passo
     details: Tutorial sem enrolação e sem instaladores automatizados para uma instalação limpa, estável e sob medida.
+  - icon: ⚡
+    title: Comandos Linux Úteis
+    details: Curadoria rápida para gerenciamento com pacman/paru, systemd, monitoramento, redes e atalhos de terminal.
 ---
 
 <div style="margin-top: 3rem; text-align: center;">
