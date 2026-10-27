@@ -118,7 +118,7 @@ alias sail='vendor/bin/sail'
 
 
 # Added by Antigravity CLI installer
-export PATH="/home/paqarch/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # SLSsteam: Add wrapper to PATH
 export PATH="$HOME/.local/share/SLSsteam/path:$PATH"

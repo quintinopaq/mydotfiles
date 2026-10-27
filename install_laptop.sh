@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # ==============================================================================
-#  install_symlinks.sh - Sincronizador de Dotfiles via Symlinks
+#  install_laptop.sh - Sincronizador de Dotfiles para Laptop
 # ==============================================================================
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles_backup/$(date +%Y%m%d_%H%M%S)"
 
-echo "🔗 Sincronizando dotfiles de: $DOTFILES_DIR"
+echo "💻 Instalando Dotfiles - Perfil Laptop"
+echo "📂 Diretório de origem: $DOTFILES_DIR"
 
 mkdir -p "$HOME/.config"
 
@@ -15,6 +16,11 @@ mkdir -p "$HOME/.config"
 link_target() {
     local src="$1"
     local dest="$2"
+
+    if [ ! -e "$src" ]; then
+        echo "  ⚠ Origem não encontrada: $src (pulando)"
+        return 0
+    fi
 
     if [ -e "$dest" ] || [ -L "$dest" ]; then
         # Se já é o symlink correto, não faz nada
@@ -32,23 +38,37 @@ link_target() {
     echo "  🚀 Vinculado: $dest -> $src"
 }
 
-# 1. Kitty
+echo ""
+echo "📦 1. Vinculando configurações comuns..."
+# Terminal Kitty
 link_target "$DOTFILES_DIR/comum/kitty" "$HOME/.config/kitty"
 
-# 2. Fastfetch
+# Fastfetch
 link_target "$DOTFILES_DIR/comum/fastfetch" "$HOME/.config/fastfetch"
 
-# 3. Starship
+# Prompt Starship
 link_target "$DOTFILES_DIR/comum/starship/starship.toml" "$HOME/.config/starship.toml"
 
-# 4. Zsh
+# Shell Zsh
 link_target "$DOTFILES_DIR/comum/zsh/.zshrc" "$HOME/.zshrc"
 
-# 5. Hyprland (arquivo lua)
-link_target "$DOTFILES_DIR/comum/hypr/hyprland.lua" "$HOME/.config/hypr/hyprland.lua"
+# Hyprlock (Bloqueio de tela)
+if [ -f "$DOTFILES_DIR/comum/hypr/hyprlock.conf" ]; then
+    link_target "$DOTFILES_DIR/comum/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.conf"
+fi
 
 echo ""
-echo "✨ Todos os symlinks foram criados com sucesso!"
+echo "💻 2. Vinculando configurações específicas do Laptop..."
+# Hyprland do Laptop (touchpad, layout de teclado us/br, brilho, polkit)
+link_target "$DOTFILES_DIR/laptop/hypr/hyprland.lua" "$HOME/.config/hypr/hyprland.lua"
+
+# Monitores do Laptop (tela eDP-1 e HDMI)
+if [ -f "$DOTFILES_DIR/laptop/hypr/monitors.lua" ]; then
+    link_target "$DOTFILES_DIR/laptop/hypr/monitors.lua" "$HOME/.config/hypr/monitors.lua"
+fi
+
+echo ""
+echo "✨ Instalação do Laptop concluída com sucesso!"
 if [ -d "$BACKUP_DIR" ]; then
     echo "📁 Backups dos arquivos anteriores salvos em: $BACKUP_DIR"
 fi

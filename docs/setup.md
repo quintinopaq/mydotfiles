@@ -26,49 +26,32 @@ Atualmente estou em processo de transição da **Waybar** para o **[Caelestia Sh
 
 ## 📂 Estrutura do Repositório
 
-Para evitar conflitos entre computadores com especificações e necessidades distintas (múltiplos monitores no desktop vs economia de energia no notebook), as configurações são organizadas por perfil:
+Para evitar conflitos entre computadores com especificações e necessidades distintas (múltiplos monitores no desktop vs economia de energia no laptop), as configurações são organizadas por perfil:
 
 ```text
 📦 meus-dotfiles
  ┣ 📂 comum/                 # Configurações compartilhadas (todas as máquinas)
- ┃ ┣ 📂 hypr/                # hyprland.conf base, hyprlock.conf, hypridle.conf
- ┃ ┣ 📂 waybar/              # Configurações e estilos da Waybar
- ┃ ┗ 📂 scripts/             # Scripts utilitários (ex: capturaf.sh)
- ┣ 📂 notebook/              # Configurações específicas para notebook
- ┃ ┣ 📂 hypr/                # Otimizações de tela única e economia de energia
- ┃ ┗ 📂 waybar/              # Módulos com exibição de bateria e brilho
- ┗ 📂 screenshots/           # Fotos e capturas de tela dos setups
+ ┣ 📂 desktop/               # Configurações de Desktop
+ ┣ 📂 laptop/                # Configurações específicas para laptop
+ ┣ 📜 install_desktop.sh     # Script instalador via symlinks para Desktop
+ ┗ 📜 install_laptop.sh      # Script instalador via symlinks para Laptop
 ```
 
 ---
 
 ## 🚀 Como Aplicar as Configurações
 
-As configurações são projetadas para serem copiadas ou criadas com links simbólicos (*symlinks*) na pasta de configurações do usuário (`~/.config/`):
-
-### 1. Clonando o Repositório
+O repositório conta com scripts automatizados de symlinks que fazem backup seguro das configurações existentes antes de vincular:
 
 ```bash
 git clone https://github.com/paqgamer/mydotfiles.git ~/mydotfiles
 cd ~/mydotfiles
-```
 
-### 2. Configurações Compartilhadas (`comum/`)
+# Se estiver no Desktop:
+./install_desktop.sh
 
-Copie os arquivos comuns para a pasta de configurações do seu usuário:
-
-```bash
-cp -r comum/hypr ~/.config/
-cp -r comum/waybar ~/.config/
-```
-
-### 3. Ajustes para Notebook (se aplicável)
-
-Se estiver usando em um notebook, sobreponha as configurações correspondentes:
-
-```bash
-cp -r notebook/hypr/* ~/.config/hypr/
-cp -r notebook/waybar/* ~/.config/waybar/
+# Se estiver no Laptop:
+./install_laptop.sh
 ```
 
 ---
@@ -93,7 +76,7 @@ O layout do Hyprland suporta monitores com taxas de atualização elevadas (144H
     <p style="text-align: center; font-size: 0.9rem; color: var(--vp-c-text-2); margin-top: 0.4rem;">Arch Linux Desktop</p>
   </div>
   <div>
-    <img src="/screenshots/desktopwindows.png" alt="Notebook Setup" style="border-radius: 8px; width: 100%; border: 1px solid var(--vp-c-divider);" />
-    <p style="text-align: center; font-size: 0.9rem; color: var(--vp-c-text-2); margin-top: 0.4rem;">Ambiente Secundário / Notebook</p>
+    <img src="/screenshots/desktopwindows.png" alt="Laptop Setup" style="border-radius: 8px; width: 100%; border: 1px solid var(--vp-c-divider);" />
+    <p style="text-align: center; font-size: 0.9rem; color: var(--vp-c-text-2); margin-top: 0.4rem;">Ambiente Secundário / Laptop</p>
   </div>
 </div>

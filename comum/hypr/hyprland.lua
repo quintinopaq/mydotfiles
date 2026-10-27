@@ -273,10 +273,11 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
--- jcode launch hotkeys
-hl.bind(mainMod .. " + semicolon",  hl.dsp.exec_cmd("'/home/paqarch/.jcode/hotkey/launch_jcode_0_cmd_semicolon.sh'"))
-hl.bind(mainMod .. " + apostrophe", hl.dsp.exec_cmd("'/home/paqarch/.jcode/hotkey/launch_jcode_1_cmd_quote.sh'"))
-hl.bind(mainMod .. " + SHIFT + apostrophe", hl.dsp.exec_cmd("'/home/paqarch/.jcode/hotkey/launch_jcode_2_cmd_shift_quote.sh'"))
+-- jcode launch hotkeys (if present)
+local home = os.getenv("HOME") or ""
+hl.bind(mainMod .. " + semicolon",  hl.dsp.exec_cmd("'" .. home .. "/.jcode/hotkey/launch_jcode_0_cmd_semicolon.sh'"))
+hl.bind(mainMod .. " + apostrophe", hl.dsp.exec_cmd("'" .. home .. "/.jcode/hotkey/launch_jcode_1_cmd_quote.sh'"))
+hl.bind(mainMod .. " + SHIFT + apostrophe", hl.dsp.exec_cmd("'" .. home .. "/.jcode/hotkey/launch_jcode_2_cmd_shift_quote.sh'"))
 
 
 --------------------------------

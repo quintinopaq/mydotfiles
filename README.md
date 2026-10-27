@@ -19,7 +19,7 @@ Um repositório pessoal para manter meu ambiente de desenvolvimento e uso diári
     </td>
     <td valign="top" width="50%">
       <img src="./screenshots/desktopwindows.png" alt="Windows Setup" width="100%">
-      <p align="center">🪟 Ambiente Secundário / Notebook</p>
+      <p align="center">🪟 Ambiente Secundário / Laptop</p>
     </td>
   </tr>
 </table>
@@ -47,12 +47,11 @@ Como eu utilizo máquinas com propósitos e hardwares diferentes, dividi os arqu
 
 ```text
 📦 meus-dotfiles
- ┣ 📂 comum/                 # Funciona perfeitamente em qualquer máquina
- ┃ ┗ 📂 scripts/             # Scripts de captura de tela, utilitários, etc.
- ┣ 📂 desktop/               # Configurações de alta performance e múltiplos monitores
- ┃ ┗ 📜 hyprland.conf
- ┗ 📂 notebook/              # Configurações focadas em economia de bateria e rede móvel
-   ┗ 📜 hyprland.conf
+ ┣ 📂 comum/                 # Configurações compartilhadas (Kitty, Fastfetch, Starship, Zsh, Hyprlock)
+ ┣ 📂 desktop/               # Configurações de Desktop (monitores múltiplos, Hyprland alta performance)
+ ┣ 📂 laptop/                # Configurações de Laptop (economia de bateria, teclado us/br, touchpad)
+ ┣ 📜 install_desktop.sh     # Script instalador via symlinks para Desktop
+ ┗ 📜 install_laptop.sh      # Script instalador via symlinks para Laptop
 ```
 
 <br>

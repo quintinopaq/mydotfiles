@@ -24,7 +24,7 @@ features:
     title: Hyprland Wayland
     details: Compositor Wayland dinâmico com animações suaves, integração com Waybar, Hyprlock e ferramentas modernas.
   - icon: 🔄
-    title: Desktop & Notebook
+    title: Desktop & Laptop
     details: Separação modular entre máquinas de alta performance com múltiplos monitores e setups para economia de bateria.
   - icon: 📖
     title: Guia Arch Passo a Passo
@@ -56,7 +56,7 @@ features:
   </div>
   <div style="border: 1px solid var(--vp-c-divider); border-radius: 12px; overflow: hidden; padding: 1rem; background: var(--vp-c-bg-soft);">
     <img src="/screenshots/desktopwindows.png" alt="Windows Setup" style="border-radius: 8px; width: 100%; object-fit: cover;" />
-    <h3 style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem;">🪟 Notebook / Secundário</h3>
+    <h3 style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem;">🪟 Laptop / Secundário</h3>
     <p style="font-size: 0.9rem; color: var(--vp-c-text-2); text-align: center;">Ambiente móvel configurado para produtividade e eficiência energética.</p>
   </div>
 </div>
