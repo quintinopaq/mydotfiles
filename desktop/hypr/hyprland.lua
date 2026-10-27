@@ -59,6 +59,12 @@ hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
+-- NVIDIA Fixes (Hyprland Wayland)
+hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+hl.env("NVD_BACKEND", "direct")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+
 
 -------------------
 ---- PERMISSIONS --
@@ -227,7 +233,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 -- Session & Lock
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("swaylock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("caelestia shell lock lock"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 
 -- Clipboard
