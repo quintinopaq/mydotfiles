@@ -1,0 +1,117 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "file",
+        "source": "/home/paqarch/.config/fastfetch/arch_blocks_blue.txt",
+        "padding": {
+            "top": 1,
+            "left": 1,
+            "right": 3
+        }
+    },
+    "display": {
+        "separator": " \udb80\udc54 ",
+        "color": {
+            "separator": "bright_black"
+        }
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u001b[1;36mQuintino\u001b[0m \u001b[38;2;187;154;247m(paqgamer)\u001b[0m \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e"
+        },
+        {
+            "type": "custom",
+            "format": "\u2502  \u001b[38;2;79;214;190m\"Se algo precisa ser feito 2x, merece um script.\"\u001b[0m  \u2502"
+        },
+        {
+            "type": "custom",
+            "format": "\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        },
+        {
+            "type": "title",
+            "key": " \uf007 User",
+            "keyColor": "bright_cyan",
+            "format": "{user-name}@{host-name}"
+        },
+        {
+            "type": "os",
+            "key": " \udb82\udcc7 OS",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "kernel",
+            "key": " \udb80\udf3d Kernel",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wm",
+            "key": " \udb84\udcac WM",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "shell",
+            "key": " \uf489 Shell",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": " \ue795 Terminal",
+            "keyColor": "green"
+        },
+        {
+            "type": "uptime",
+            "key": " \udb80\udd50 Uptime",
+            "keyColor": "bright_magenta"
+        },
+        {
+            "type": "packages",
+            "key": " \udb80\udfd6 Packages",
+            "keyColor": "red"
+        },
+        {
+            "type": "custom",
+            "format": "\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        },
+        {
+            "type": "cpu",
+            "key": " \uf4bc CPU",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "gpu",
+            "key": " \udb82\udcae GPU",
+            "keyColor": "blue"
+        },
+        {
+            "type": "memory",
+            "key": " \udb80\udf5b Memory",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "format": "\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+        },
+        {
+            "type": "custom",
+            "key": " \ue627 Stack",
+            "keyColor": "bright_red",
+            "format": "Laravel (PHP) \ue751  \u2022  JavaScript / TS \ue69d  \u2022  AI \udb81\udea9"
+        },
+        {
+            "type": "custom",
+            "key": " \udb80\udea2 Git",
+            "keyColor": "bright_cyan",
+            "format": "github.com/quintinopaq"
+        },
+        {
+            "type": "custom",
+            "format": "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f"
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle"
+        }
+    ]
+}

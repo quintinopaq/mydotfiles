@@ -1,0 +1,89 @@
+# Starship Prompt - Dark Cyber / Neon Pill Aesthetic
+format = """
+[░▒▓](#1e2030)\
+[ 󰣇 ](bg:#1e2030 fg:#00f5d4)\
+[](bg:#2e3440 fg:#1e2030)\
+$directory\
+[](bg:#3b4252 fg:#2e3440)\
+$git_branch\
+$git_status\
+[](bg:#4c566a fg:#3b4252)\
+$nodejs\
+$rust\
+$golang\
+$python\
+$php\
+[](fg:#4c566a)\
+$fill\
+$cmd_duration\
+$time\
+$line_break\
+$character"""
+
+# Don't print empty line between prompts
+add_newline = false
+
+[character]
+success_symbol = "[ 󰄛 ](bold #00f5d4)"
+error_symbol = "[ 󰄛 ](bold #ff5370)"
+
+[directory]
+style = "bg:#2e3440 fg:#c8d3f5"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󱔗 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"code" = " "
+"CODEdocs" = " CODEdocs"
+
+[git_branch]
+style = "bg:#3b4252 fg:#bb9af7"
+format = "[ 󰊢 $branch ]($style)"
+
+[git_status]
+style = "bg:#3b4252 fg:#ff757f"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+symbol = " "
+style = "bg:#4c566a fg:#a6e3a1"
+format = "[ $symbol($version) ]($style)"
+
+[rust]
+symbol = "󱘗 "
+style = "bg:#4c566a fg:#ff9e64"
+format = "[ $symbol($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "bg:#4c566a fg:#7dcfff"
+format = "[ $symbol($version) ]($style)"
+
+[python]
+symbol = " "
+style = "bg:#4c566a fg:#ffc777"
+format = "[ $symbol($version) ]($style)"
+
+[php]
+symbol = " "
+style = "bg:#4c566a fg:#cba6f7"
+format = "[ $symbol($version) ]($style)"
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bold #585b70"
+format = "[ 󱑎 $time ]($style)"
+
+[cmd_duration]
+min_time = 2_000
+style = "bold #ffc777"
+format = "[  $duration ]($style)"
