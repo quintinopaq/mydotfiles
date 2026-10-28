@@ -26,7 +26,14 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("waypaper --restore")
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("copyq --start-server")
+    hl.exec_cmd("hyprpm reload -n")
 end)
+
+hl.permission({
+    binary = "/usr/(bin|local/bin)/hyprpm",
+    type   = "plugin",
+    mode   = "allow",
+})
 
 hl.device({
     name = "synaptics-tm3096-006",
@@ -113,6 +120,11 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + Tab", function()
+    if hl.plugin and hl.plugin.scrolloverview then
+        hl.plugin.scrolloverview.overview("toggle")
+    end
+end)
 
 hl.bind("CTRL + ALT + T", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("zen-browser"))

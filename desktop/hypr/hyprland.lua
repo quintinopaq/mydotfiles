@@ -36,6 +36,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("copyq --start-server")
     hl.exec_cmd("env QT_STYLE_OVERRIDE='' QT_QPA_PLATFORMTHEME='' /usr/lib/mate-polkit/polkit-mate-authentication-agent-1")
     hl.exec_cmd("caelestia shell")
+    hl.exec_cmd("hyprpm reload -n")
 end)
 
 
@@ -231,6 +232,11 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + A", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + Tab", function()
+    if hl.plugin and hl.plugin.scrolloverview then
+        hl.plugin.scrolloverview.overview("toggle")
+    end
+end)
 
 -- Session & Lock
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("caelestia shell lock lock"))
