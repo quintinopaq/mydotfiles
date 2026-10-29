@@ -125,6 +125,11 @@ hl.bind(mainMod .. " + Tab", function()
         hl.plugin.scrolloverview.overview("toggle")
     end
 end)
+hl.bind(mainMod .. " + G", function()
+    if hl.plugin and hl.plugin.overview then
+        hl.plugin.overview.toggle()
+    end
+end)
 
 hl.bind("CTRL + ALT + T", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("zen-browser"))

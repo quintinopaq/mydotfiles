@@ -237,6 +237,11 @@ hl.bind(mainMod .. " + Tab", function()
         hl.plugin.scrolloverview.overview("toggle")
     end
 end)
+hl.bind(mainMod .. " + G", function()
+    if hl.plugin and hl.plugin.overview then
+        hl.plugin.overview.toggle()
+    end
+end)
 
 -- Session & Lock
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("caelestia shell lock lock"))
