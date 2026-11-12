@@ -111,11 +111,11 @@ alias tchau="systemctl restart sddm"
 alias sethypr='micro ~/.config/hypr/hyprland.conf'
 alias dex='cd ~/code/DexStroll-Trainee-2026.1/'
 alias reload='source ~/.zshrc'
-alias cameracel="scrcpy --video-source=camera --no-audio --video-bit-rate=16M --max-fps=60"
+alias cameracel="scrcpy --video-source=camera --no-audio --video-bit-rate=16M --max-fps=60 & disown"
 alias setzsh="micro ~/.zshrc"
 alias s="sudo-rs"
 alias sail='vendor/bin/sail'
-
+alias dorme='systemctl suspend'
 
 # Added by Antigravity CLI installer
 export PATH="$HOME/.local/bin:$PATH"

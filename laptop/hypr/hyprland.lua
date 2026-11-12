@@ -22,6 +22,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     -- hl.exec_cmd("waybar")
+    hl.exec_cmd("hypridle")
     hl.exec_cmd("caelestia shell")
     hl.exec_cmd("waypaper --restore")
     hl.exec_cmd("hyprsunset")
@@ -91,7 +92,27 @@ hl.config({
     dwindle = {
         preserve_split = true,
     },
+    misc = {
+        force_default_wallpaper = -1,
+        disable_hyprland_logo   = false,
+        mouse_move_enables_dpms = true,
+        key_press_enables_dpms  = true,
+    },
 })
+
+-- Garante que chamadas hl.dsp.dpms("on") / hl.dsp.dpms("off") (ex: via hyprctl/hypridle)
+-- passem a tabela { action = ... } exigida pela API Lua do Hyprland, evitando efeito toggle
+do
+    local orig_dpms = hl.dsp.dpms
+    if type(orig_dpms) == "function" then
+        hl.dsp.dpms = function(arg)
+            if type(arg) == "string" then
+                return orig_dpms({ action = arg })
+            end
+            return orig_dpms(arg)
+        end
+    end
+end
 
 -- 5. ANIMAÇÕES (Curvas e Regras)
 hl.curve("linear", { type = "bezier", points = { { 0.0, 0.0 }, { 1.0, 1.0 } } })
@@ -156,8 +177,8 @@ hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.window.move({ workspace = 4 }))
 hl.bind(mainMod .. " + SHIFT + 5", hl.dsp.window.move({ workspace = 5 }))
 
 -- Mouse
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- 8. CONTROLES MULTIMÍDIA E SCREENSHOTS
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })

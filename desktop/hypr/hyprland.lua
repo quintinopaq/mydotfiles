@@ -143,8 +143,24 @@ hl.config({
     misc = {
         force_default_wallpaper = -1,
         disable_hyprland_logo   = false,
+        mouse_move_enables_dpms = true,
+        key_press_enables_dpms  = true,
     },
 })
+
+-- Garante que chamadas hl.dsp.dpms("on") / hl.dsp.dpms("off") (ex: via hyprctl/hypridle)
+-- passem a tabela { action = ... } exigida pela API Lua do Hyprland, evitando efeito toggle
+do
+    local orig_dpms = hl.dsp.dpms
+    if type(orig_dpms) == "function" then
+        hl.dsp.dpms = function(arg)
+            if type(arg) == "string" then
+                return orig_dpms({ action = arg })
+            end
+            return orig_dpms(arg)
+        end
+    end
+end
 
 
 --------------------
@@ -245,7 +261,7 @@ end)
 
 -- Session & Lock
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("caelestia shell lock lock"))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 -- Clipboard
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("copyq show"))
