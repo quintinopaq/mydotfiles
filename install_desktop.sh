@@ -62,6 +62,9 @@ echo "🖥️  2. Vinculando configurações específicas do Desktop..."
 # Hyprland do Desktop
 link_target "$DOTFILES_DIR/desktop/hypr/hyprland.lua" "$HOME/.config/hypr/hyprland.lua"
 
+# Variáveis de ambiente UWSM do Desktop
+link_target "$DOTFILES_DIR/desktop/uwsm/env" "$HOME/.config/uwsm/env"
+
 echo ""
 echo "✨ Instalação do Desktop concluída com sucesso!"
 if [ -d "$BACKUP_DIR" ]; then

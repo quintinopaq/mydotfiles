@@ -65,6 +65,7 @@ hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("NVD_BACKEND", "direct")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+hl.env("AQ_NO_ATOMIC", "1")
 
 
 -------------------
@@ -145,6 +146,10 @@ hl.config({
         disable_hyprland_logo   = false,
         mouse_move_enables_dpms = true,
         key_press_enables_dpms  = true,
+    },
+
+    cursor = {
+        use_cpu_buffer = 0,
     },
 })
 
